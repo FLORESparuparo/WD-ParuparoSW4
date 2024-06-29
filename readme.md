@@ -56,6 +56,8 @@
 <!-- The following are just sample -->
 <h3>Features Pages Designs</h3>
 The purpose of this project is to learn, experience, and become better in designing websites using HTML and CSS.
+I have learned multiple things from this seatwork because of wanting to try different things to my website.
+Unfortunately, I was not able to learn ALL that I wanted but there are more things that I want and can learn.
 
 ### Key Components
 <!-- TODO: List of Key Components -->
