@@ -1,0 +1,91 @@
+.gameplay {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding-bottom: .5rem;
+
+    background: gold;
+    text-align: center;
+}
+
+.gameplay .cards {
+    display: flex;
+    justify-content: center;
+    column-gap: 10vw;
+}
+
+.gameplay .card {
+    height: 20rem;
+    min-width: 16rem;
+    max-width: 16rem;
+    border-radius: 1rem;
+    align-content: end;
+
+    transition: 0.5s;
+
+    &:hover {
+        & .card--info-tile {
+            height: 16rem;
+            border-radius: 1rem;
+            & .card--description {
+                opacity: 1;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                transition: 1s;
+            }
+        }
+    }
+}
+
+.gameplay .card--capture {
+    background: slategray url("../img/svg/filetype-gif.svg") no-repeat center center / 12rem;
+
+    &:hover { background-color: rgb(64, 73, 82); }
+}
+
+.gameplay .card--manipulate {
+    background: darkorchid url("../img/svg/filetype-gif.svg")no-repeat center center / 12rem;
+
+    &:hover { background-color: rgb(95, 31, 128); }
+}
+
+.gameplay .card--fragments {
+    background: lightcoral url("../img/svg/filetype-gif.svg") no-repeat center center / 12rem;
+
+    &:hover { background-color: rgb(161, 87, 87); }
+}
+
+.gameplay .card--info-tile {
+    height: 2rem;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: .5rem;
+
+    background-color: white;
+    transition: 0.5s;
+}
+
+.gameplay .card--title {
+    font-family: Montserrat;
+}
+
+.gameplay .card--description {
+    margin-inline: 1rem;
+    margin-top: 1rem;
+
+    opacity: 0;
+    font-size: 1.3rem;
+    text-align: justify;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 50%);
+    transition: 0.25s;
+}
+
+@media screen and (max-width: 1080px) {
+    .gameplay .cards {
+        justify-content: start;
+        padding-inline: 2.5rem;
+
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+}

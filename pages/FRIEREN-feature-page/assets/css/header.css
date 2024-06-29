@@ -1,0 +1,87 @@
+header {
+    position: fixed;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12rem;
+    height: 4rem;
+    width: 100%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    background-color: cornflowerblue;
+}
+
+header .logo {
+    position: absolute;
+    left: 4rem;
+    top: .5rem;
+
+    display: flex;
+    align-items: center;
+
+    :has(& .logo--image:hover) {
+        .logo--name {
+
+            opacity: 1;
+            transform: translateX(4rem);
+        }
+    }
+}
+
+header .logo--image {
+    z-index: 1;
+
+    height: 3rem;
+    border-radius: 75px;
+    align-self: center;
+}
+
+header .logo--name {
+    position: absolute;
+
+    font-size: 1.7vh;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+header .navigation {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.navigation .button {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 2rem;
+    border-style: solid;
+    border-width: 1px;
+
+    text-decoration: none;
+    color: cornflowerblue;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.button:not(.button--page-2):hover {
+    border-style: solid;
+    border-width: 1px;
+
+    color: white;
+    background-color: transparent;
+    transform: scale(0.9);
+}
+
+.navigation .button--page-2 {
+    border-style: solid;
+    border-width: 2px;
+
+    color: white;
+    background-color: transparent;
+    font-style: oblique;
+    cursor: default;
+}

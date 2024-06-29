@@ -1,0 +1,36 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80svh;
+
+    background: linear-gradient(#00000080, #00000080), url("../img/omoide.jpg") no-repeat center center / cover;
+}
+
+.hero .main-texts {
+    z-index: 0;
+
+    & * {
+        text-align: center;
+        color: white;
+    }
+}
+
+.hero .title {
+    font-size: 12vw;
+    font-family: Permanent Marker;
+}
+
+.hero .subtitle {
+    margin-top: .5vh;
+
+    font-size: 3vh;
+}
+
+.hero .description {
+    margin-top: 7.5vh;
+    padding-inline: 8vw;
+
+    font-size: 2vh;
+}

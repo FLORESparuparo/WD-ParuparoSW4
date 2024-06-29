@@ -1,0 +1,149 @@
+main .characters {
+    display: grid;
+    grid-template-rows: 10vh 70vh;
+    grid-template-columns: 60% 40%;
+
+    background-color: blueviolet;
+
+    :has(& .card--Frieren:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Frieren_anime_profile.webp");
+        }
+    }
+    :has(& .card--Fern:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Fern_anime_profile.webp");
+        }
+    }
+    :has(& .card--Stark:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Stark_anime_profile.webp");
+        }
+    }
+    :has(& .card--Sein:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Sein_anime_profile.webp");
+        }
+    }
+    :has(& .card--Ubel:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Ubel_anime_profile.webp");
+        }
+    }
+    :has(& .card--Land:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Land_anime_profile.webp");
+        }
+    }
+    :has(& .card--Denken:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Denken_anime_profile.webp");
+        }
+    }
+    :has(& .card--Serie:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Serie_anime_profile.webp");
+        }
+    }
+    :has(& .card--Sense:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Sense_anime_profile.webp");
+        }
+    }
+    :has(& .card--Wirbel:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Wirbel_anime_profile.webp");
+        }
+    }
+    :has(& .card--Kraft:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Kraft_anime_profile.webp");
+        }
+    }
+    :has(& .card--Eisen:hover) {
+        .characters .display-character {
+            content: url("../img/characters/Eisen_anime_profile.webp");
+        }
+    }
+    :has(& .card:hover) {
+        .display--container {
+            background: radial-gradient(ellipse 50% 50%, gold, transparent);
+        }
+    }
+}
+
+.characters .title {
+    grid-column: 1 / 4;
+}
+
+.characters .characters--container {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-columns: repeat(4, max-content);
+    gap: 1rem;
+    padding: 2rem;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    border-color: black;
+    height: max-content;
+    width: max-content;
+    align-self: center;
+    justify-self: center;
+
+    background: radial-gradient(ellipse 75% 75%, transparent 50%, #ffffffaa 100%);
+}
+
+.characters .card {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    padding: 1rem 1rem .5rem;
+    border-radius: 1rem;
+
+    background-color: white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: gold;
+        transform: scale(1.1);
+
+        .card--name {
+            background-color: goldenrod;
+        }
+    }
+}
+
+.characters .card--portrait {
+    height: 105px;
+    width: 105px;
+
+    background-image: radial-gradient(ellipse 50% 50%, gold, transparent);
+}
+
+.characters .card--name {
+    border-radius: .5rem;
+
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    font-family: Permanent Marker;
+    transition: 0.3s;
+}
+
+.characters .display--container {
+    display: flex;
+    justify-content: center;
+
+    background: radial-gradient(ellipse 50% 50%, white, transparent);
+}
+
+.characters .display-character {
+    grid-row: 2;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    height: 70vh;
+}

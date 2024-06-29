@@ -1,0 +1,28 @@
+
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+
+    text-align: center;
+    background: blueviolet url("../img/svg/images.svg") no-repeat center center / 12rem;
+
+    &:hover {
+        & .main-texts {
+            transform: translateY(-16rem);
+            transition: 0.5s;
+        }
+    }
+}
+
+.story .main-texts {
+    padding-block: 8rem;
+    height: .5rem;
+    min-width: 50%;
+    justify-content: center;
+
+    transition: 0.7s;
+    background-image: radial-gradient(ellipse 50% 40%, #ffffffa0, transparent);
+}

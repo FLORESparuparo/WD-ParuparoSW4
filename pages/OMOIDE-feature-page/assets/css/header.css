@@ -1,0 +1,109 @@
+header {
+    position: fixed;
+    z-index: 1;
+
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    height: 90%;
+    align-items: center;
+    column-gap: 1rem;
+
+    :has(& .logo--image:hover) {
+        .logo--name {
+
+            opacity: 1;
+            transform: translateX(4rem);
+        }
+    }
+}
+
+.logo--image {
+    z-index: 1;
+
+    height: inherit;
+    border-radius: 75px;
+    align-self: center;
+}
+
+.logo--name {
+    position: absolute;
+
+    font-size: 2vh;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.navigation {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navigation .button {
+    display: flex;
+    padding: .5rem 1rem;
+    border-radius: 12px;
+    column-gap: .5rem;
+    min-width: 6rem;
+    max-height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+    background-color: #363030;
+    transition: 0.2s;
+}
+
+
+.button:not(.button--page-1, .button--unset):hover {
+    color: white;
+    background-color: #685d5d;
+    transform: scale(1.2);
+}
+
+.navigation .button--page-1 {
+    border-bottom-style: solid;
+    border-width: 3px;
+
+    color: #363030;
+    background-color: transparent;
+    transform: scale(1.1) translateY(-3px);
+    font-style: oblique;
+    cursor: default;
+}
+
+.navigation .button--unset {
+    opacity: 0.7;
+    cursor: default;
+}
+
+@media screen and (max-width: 720px) {
+    header {
+        justify-content: space-around;
+    }
+    .navigation .button {
+        min-width: 1px;
+
+        & .text {
+            display: none;
+            width: 0;
+        }
+
+        & svg {
+            height: 100;
+        }
+    }
+
+    .button--unset {
+        transform: scale(0.7);
+    }
+}

@@ -1,0 +1,104 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100dvh;
+    font-family: Playwrite DE Grund;
+
+    background: radial-gradient(ellipse 150% 150%, transparent, #f08080);
+
+    :has(& .main-texts:hover, & .navigation:hover){
+        .button--omoide {
+            padding-inline: 4rem;
+            &::after {
+                content: "OMOIDE";
+            }
+        }
+
+        .button--frieren {
+            padding-inline: 4rem;
+            &::after {
+                content: "FRIEREN";
+            }
+        }
+    }
+}
+
+.logo {
+    height: 4rem;
+    border-radius: 75px;
+    margin-bottom: 2rem;
+}
+
+.main-texts {
+    display: flex;
+    flex-direction: column;
+    min-height: 25vh;
+    min-width: 50vw;
+    justify-content: center;
+
+    color: white;
+    background: radial-gradient(ellipse at center, transparent, lightcoral);
+    text-align: center;
+    border-radius: 16px;
+}
+
+.main-texts .title {
+    font-size: 3rem;
+    font-family: Playwrite DE Grund;
+}
+
+.main-texts .subtitle { font-size: 1.5rem; }
+
+.main-texts .description {
+    margin-top: 2rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 32%;
+    padding-top: 3rem;
+
+    &:has(.button:hover) .button:not(:hover) {
+        opacity: 0.3;
+        transition: 0.25s;
+    }
+}
+
+.navigation .button {
+    height: 1.7rem;
+    padding: .5rem 1.4rem;
+    border-radius: 75px;
+
+    font-size: 1.5rem;
+    font-family: Montserrat;
+    align-content: center;
+    background-color: white;
+    text-decoration: none;
+    color: lightcoral;
+    transition: 0.5s;
+
+    &:hover {
+        color: white;
+        background: radial-gradient(ellipse at center, transparent, lightcoral);
+        transform: scale(1.2);
+        transition: 0.2s;
+    }
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: .5rem;
+
+    color: white;
+}
+
+/* dev *//*
+main * {
+    border-color: red;
+    border-width: 1px;
+    border-style: dashed;
+}

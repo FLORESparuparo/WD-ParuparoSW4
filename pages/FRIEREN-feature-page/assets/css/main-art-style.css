@@ -1,0 +1,47 @@
+main .art-style {
+    display: grid;
+    grid-template-rows: max-content auto;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background-color: skyblue;
+}
+
+.art-style .title {
+    grid-column: 1 / 4;
+}
+
+.art-style .dialogue--Stark {
+    grid-row: 2;
+    grid-column: 1;
+
+    height: 420.4px;
+    width: 386px;
+    object-fit: cover;
+    object-position: 0 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.art-style .info-tile {
+    grid-row: 2;
+    grid-column: 2 / 4;
+
+    height: 8vw;
+    padding-block: 1rem;
+    margin-bottom: 4rem;
+    margin-right: 8rem;
+    align-content: center;
+    align-self: end;
+    border-radius: 75px;
+
+    background-color: white;
+}
+
+.art-style .description {
+    margin-inline: 8rem;
+    height: 50%;
+    text-align: center;
+    align-content: center;
+
+    font-family: Architects Daughter;
+}

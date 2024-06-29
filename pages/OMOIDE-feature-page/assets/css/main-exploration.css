@@ -1,0 +1,82 @@
+.exploration {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    text-align: center;
+    background: linear-gradient(120deg, lime 0%, lime 33%, skyblue 33%, skyblue 66%, crimson 66%, crimson 100%);
+
+    :has(& .hover--real-world:hover) {
+        .exploration {
+            background: linear-gradient(120deg,lime 0%, lime  50%, skyblue 50%, skyblue 75%, crimson 75%, crimson 100%);
+        }
+        .bg--real-world,
+        .dimension--real-world { width: 125%; }
+        .bg--dreamscapes,
+        .dimension--dreamscapes { width: 125%; }
+        .bg--nightmares,
+        .dimension--nightmares { width: 50%; }
+    }
+
+    :has(& .hover--dreamscapes:hover) {
+        .exploration {
+            background: linear-gradient(120deg, lime  0%, lime  25%, skyblue 25%, skyblue 75%, crimson 75%, crimson 100%);
+        }
+        .bg--real-world,
+        .dimension--real-world { width: 50%; }
+        .bg--dreamscapes,
+        .dimension--dreamscapes { width: 200%; }
+        .bg--nightmares,
+        .dimension--nightmares { width: 50%; }
+    }
+
+    :has(& .hover--nightmares:hover) {
+        .exploration {
+            background: linear-gradient(120deg, lime  0%, lime  25%, skyblue 25%, skyblue 50%, crimson 50%, crimson 100%);
+        }
+        .bg--real-world,
+        .dimension--real-world { width: 50%; }
+        .bg--dreamscapes,
+        .dimension--dreamscapes { width: 100%; }
+        .bg--nightmares,
+        .dimension--nightmares { width: 150%; }
+    }
+}
+
+.exploration .hover-dimension {
+    position: absolute;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 70svh;
+    width: 100%;
+}
+
+.exploration .backgrounds {
+    position: absolute;
+
+    display: flex;
+    width: 100%;
+}
+
+.exploration .bg {
+    height: 70svh;
+    width: 100%;
+
+    opacity: 0.5;
+    background: url("../img/svg/image.svg") no-repeat center center / 12svh;
+}
+
+.exploration .dimensions {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    margin-block: 12vh;
+}
+
+.exploration .dimension {
+    width: 100%;
+    font-size: calc(1vh + 1vw + 1vmin);
+    font-family: Gloria Hallelujah;
+}

@@ -1,0 +1,55 @@
+main .game-genre {
+    display: grid;
+    grid-template-rows: max-content auto;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background: url("../img/dungeon.jpg") no-repeat center center / cover;
+}
+
+.game-genre .title {
+    grid-column: 1 / 4;
+
+    color: white;
+}
+
+.game-genre .dialogue--Frieren {
+    grid-row: 2;
+    grid-column: 1;
+
+    height: 420.4px;
+    width: 386px;
+    object-fit: cover;
+    object-position: 0 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.game-genre .info-tile {
+    grid-row: 2;
+    grid-column: 2 / 4;
+
+    height: 8vw;
+    padding-block: 1rem;
+    margin-bottom: 4rem;
+    margin-right: 8rem;
+    align-content: center;
+    align-self: end;
+    border-radius: 75px;
+
+    background-color: white;
+}
+
+.game-genre .description {
+    margin-inline: 8rem;
+    height: 50%;
+    text-align: center;
+    align-content: center;
+
+    font-family: Architects Daughter;
+}
+
+main cite {
+    display: flex;
+    height: max-content;
+    justify-content: end;
+}
